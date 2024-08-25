@@ -31,6 +31,8 @@ public class BudgetExceedEventExecutor implements EventExecutor<BudgetExceedEven
             String payload = objectMapper.writeValueAsString(event);
 
             Map<String, Object> contentMap = Map.of(
+                    "budgetType",event.getBudgetType(),
+                    "expenseDescription",event.getExpenseDescription(),
                     "expenseType", event.getExpenseType(),
                     "expenseName", event.getExpenseName(),
                     "amount", event.getAmount(),
