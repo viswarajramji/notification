@@ -5,7 +5,24 @@
 
 The Notification Service System is designed to manage notifications, handle events, process commands, and interact with entities through queries. It follows an event-driven architecture to ensure decoupling and scalability.
 
-## Components
+## Sample output:
+
+![image](https://github.com/user-attachments/assets/f29a1a07-3521-4b96-820f-abd3468fe75b)
+
+## Project Structure
+
+- `api`: Core API interfaces.
+- `command`: Classes encapsulating command details.
+- `controller`: REST controllers managing HTTP requests.
+- `event`: Event classes representing system actions.
+- `executors`: Business logic processors for commands.
+- `kafka`: Kafka message producers and consumers.
+- `model`: Business entity data models.
+- `query`: Data retrieval operations.
+- `repo`: Database interaction.
+- `service`: Business logic and service layer.
+
+## Process Flow Diagram
 
 ### Notification Service
 
@@ -14,35 +31,6 @@ The `Notification Service` executes commands related to notifications and proces
 ### Event-Driven Architecture
 
 The system uses an event-driven architecture where events trigger specific actions within the system. This design enhances scalability and maintainability.
-
-## How to Run the Application
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-repo/notification-service.git
-   cd notification-service
-   ```
-
-2. **Set Up Environment**
-   Ensure you have Java JDK 11+ and Maven installed. Configure your environment variables and database settings as needed.
-
-3. **Build the Application**
-   ```bash
-   mvn clean install
-   ```
-
-4. **Run the Application**
-   ```bash
-   mvn spring-boot:run
-   ```
-
-5. **Access the Application**
-    - **API Endpoints:**
-        - `GET /api/notifications/query/all` - Fetch all notification logs.
-        - `GET /api/notifications/query/{userId}` - Fetch notification logs by user ID.
-
-6. **Event Handling**
-    - Ensure Kafka is configured to send `BudgetExceedEvent` and `DeleteUserEvent` to the service.
 
 ## Process Flow Diagram
 
@@ -182,4 +170,34 @@ classDiagram
 ```
 
 
+## Getting Started
 
+To run the service locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/viswarajramji/notification.git
+   cd notification
+   ```
+
+2. **Build the application**:
+   ```bash
+   ./mvnw clean install
+   ```
+
+3. **Start the application**:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+
+4. **Access the application** at `http://localhost:8088`.
+
+5. **Access the database** at `http://localhost:8088/h2-console`.
+
+**Note**: Ensure Kafka is running and the topic `notificationservice` is created.
+
+## Swagger Endpoint
+
+Access the Swagger UI to interact with the API:
+
+- **URL**: `http://localhost:8088/swagger-ui.html`
