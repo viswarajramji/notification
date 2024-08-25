@@ -30,7 +30,7 @@ public class NotificationLogController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<List<NotificationLog>> getNotificationLogsByUserId(@Valid @PathVariable Long userId) {
+    public ResponseEntity<List<NotificationLog>> getNotificationLogsByUserId(@PathVariable Long userId) {
         // Execute the command to fetch notification logs by userId
         FetchAllNotificationLogsByUserIdCommand command = new FetchAllNotificationLogsByUserIdCommand(userId);
         List<NotificationLog> logs = notificationService.executeCommand(command);
