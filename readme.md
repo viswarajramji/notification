@@ -9,7 +9,20 @@ The Notification Service System is designed to manage notifications, handle even
 
 ![image](https://github.com/user-attachments/assets/f29a1a07-3521-4b96-820f-abd3468fe75b)
 
-## Components
+## Project Structure
+
+- `api`: Core API interfaces.
+- `command`: Classes encapsulating command details.
+- `controller`: REST controllers managing HTTP requests.
+- `event`: Event classes representing system actions.
+- `executors`: Business logic processors for commands.
+- `kafka`: Kafka message producers and consumers.
+- `model`: Business entity data models.
+- `query`: Data retrieval operations.
+- `repo`: Database interaction.
+- `service`: Business logic and service layer.
+
+## Process Flow Diagram
 
 ### Notification Service
 
