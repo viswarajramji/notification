@@ -9,19 +9,6 @@ The Notification Service System is designed to manage notifications, handle even
 
 ![image](https://github.com/user-attachments/assets/f29a1a07-3521-4b96-820f-abd3468fe75b)
 
-## Project Structure
-
-- `api`: Core API interfaces.
-- `command`: Classes encapsulating command details.
-- `controller`: REST controllers managing HTTP requests.
-- `event`: Event classes representing system actions.
-- `executors`: Business logic processors for commands.
-- `kafka`: Kafka message producers and consumers.
-- `model`: Business entity data models.
-- `query`: Data retrieval operations.
-- `repo`: Database interaction.
-- `service`: Business logic and service layer.
-
 ## Process Flow Diagram
 
 ### Notification Service
@@ -201,3 +188,8 @@ To run the service locally:
 Access the Swagger UI to interact with the API:
 
 - **URL**: `http://localhost:8088/swagger-ui.html`
+
+## Code Coverage
+
+![image](https://github.com/user-attachments/assets/c691a060-720d-4dca-ac70-c0e2a41e2527)
+
