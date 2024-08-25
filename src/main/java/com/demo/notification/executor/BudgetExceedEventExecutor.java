@@ -31,6 +31,7 @@ public class BudgetExceedEventExecutor implements EventExecutor<BudgetExceedEven
             String payload = objectMapper.writeValueAsString(event);
 
             Map<String, Object> contentMap = Map.of(
+                    "userId", event.getUserId(),
                     "budgetType",event.getBudgetType(),
                     "expenseDescription",event.getExpenseDescription(),
                     "expenseType", event.getExpenseType(),
@@ -43,6 +44,7 @@ public class BudgetExceedEventExecutor implements EventExecutor<BudgetExceedEven
             );
 
             NotificationCommand command = new NotificationCommand(
+                    event.getUserId(),
                     "BudgetExceedEvent",
                     payload,
                     contentMap,

@@ -13,12 +13,18 @@ public class NotificationLog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long notificationId;
 
+    @Column(nullable = false)
+    private Long userId;
+
+    @Column(nullable = false)
     private String eventType;
 
     @Lob
     private String payload;
 
+    @Column(nullable = false)
     private String notificationStatus;
 
+    @Column(nullable = false)
     private String email;
 }

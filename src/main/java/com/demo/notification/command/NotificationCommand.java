@@ -14,6 +14,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NotificationCommand implements Command {
+    private Long userId;
     private String eventName;
     private String payload;
     private Map<String, Object> content;

@@ -36,6 +36,7 @@ public class NotificationCommandExecutor implements CommandExecutor<Notification
     public NotificationLog execute(NotificationCommand command) {
         // Create and save the notification log
         NotificationLog log = new NotificationLog();
+        log.setUserId(command.getUserId());
         log.setEventType(command.getEventName());
         log.setPayload(command.getPayload());
         log.setNotificationStatus("PENDING");

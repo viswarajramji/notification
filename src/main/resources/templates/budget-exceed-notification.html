@@ -4,7 +4,7 @@
     <title>Budget Exceeded Notification</title>
 </head>
 <body>
-<p>Dear User,</p>
+<p>Dear User (<strong th:text="${userId}"></strong>)</p>
 <p>Your budget for <strong th:text="${expenseType}"></strong> has been exceeded.</p>
 <p>Details:</p>
 <ul>
