@@ -5,6 +5,10 @@
 
 The Notification Service System is designed to manage notifications, handle events, process commands, and interact with entities through queries. It follows an event-driven architecture to ensure decoupling and scalability.
 
+## Sample output:
+
+![image](https://github.com/user-attachments/assets/f29a1a07-3521-4b96-820f-abd3468fe75b)
+
 ## Components
 
 ### Notification Service
